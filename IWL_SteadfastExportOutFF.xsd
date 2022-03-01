@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema xmlns="http://Map.IWLSteadfastExportOutFF" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://Map.IWLSteadfastExportOutFF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.BizTalk.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+      <b:schemaInfo standard="Flat File" codepage="65001" default_pad_char=" " pad_char_type="char" count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" root_reference="IWLExportXml" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IWLExportXml">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure="delimited" child_delimiter_type="hex" child_delimiter="0xD 0xA" child_order="postfix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="IWLExport_FF_Rcd">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="," child_order="infix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="Tripstatus" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="customer" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ste_job_no" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="date" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="cust_ref" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_name" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="6" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_add1" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="7" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_add2" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="8" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="suburb" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="9" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del-post" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="10" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_state" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="11" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="carrier" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="12" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="consignment_number" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="13" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="reference_no" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="14" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="job_cubic" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="15" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="job_weight" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="16" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="sku" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="17" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="line_qty" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="18" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="POD_Date" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="19" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="IWLExport_FF_Details">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="," child_order="infix" sequence_number="2" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="trip_status" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="customer" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ste_job_no" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="date" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="cust_ref" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_name" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="6" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_add1" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="7" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_add2" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="8" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="suburb" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="9" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_post" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="10" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="del_state" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="11" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="carrier" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="12" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="consignment_number" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="13" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="reference_no" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="14" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="job_cubic" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="15" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="job_weight" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="16" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="sku" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="17" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="line_qty" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="18" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="POD_Date" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="19" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
