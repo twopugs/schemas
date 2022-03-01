@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema xmlns="http://Godfrey.OrderConfirmation_FILEHEAD_FF" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://Godfrey.OrderConfirmation_FILEHEAD_FF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.BizTalk.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+      <b:schemaInfo standard="Flat File" codepage="65001" default_pad_char=" " pad_char_type="char" count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" root_reference="OrderConfirmation_FF" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderConfirmation_FF">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure="delimited" child_delimiter_type="hex" child_delimiter="0xD 0xA" child_order="postfix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="FileHead">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="|*|" child_order="postfix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="FILEHEAD" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataHead">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="|*|" child_order="postfix" sequence_number="2" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="DataHead" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="OrderNum" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Ignore" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Ignore" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="OrderNum" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="2" maxOccurs="2" name="DataDetail">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="|*|" child_order="postfix" sequence_number="3" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="DATADETL" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="LineNumber" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="ProductCode" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="OrderQnty" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="QuantityMet" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileTail">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="|*|" child_order="postfix" sequence_number="4" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="FILETAIL" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
