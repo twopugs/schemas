@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-16"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns="http://Godfrey.OrderRequest_IFCSHIP_FF" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://Godfrey.OrderRequest_IFCSHIP_FF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:appinfo>
@@ -176,6 +176,27 @@
                 <xs:annotation>
                   <xs:appinfo>
                     <b:fieldInfo justification="left" sequence_number="21" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Machship_type" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="22" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Machship_reference1" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="23" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Machship_reference2" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="24" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
