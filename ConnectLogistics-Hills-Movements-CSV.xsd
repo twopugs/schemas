@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://ConnectLogistics-Hills-Movements-CSV" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://ConnectLogistics-Hills-Movements-CSV" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.Azure.Integration.DesignTools.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+      <b:schemaInfo standard="Flat File" codepage="65001" default_pad_char=" " pad_char_type="char" count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" root_reference="Root" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Root">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure="delimited" child_delimiter_type="hex" child_delimiter="0xD 0xA" child_order="postfix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="Header">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="," child_order="infix" sequence_number="1" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="Header_Warehouse" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Header_Location" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Header_Movement_Type" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Header_Transaction_Code" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Header_Event_Time" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Header_Product" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="6" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			  <xs:element name="Header_Reason_Code" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="7" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Header_Batch" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="8" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Header_Quantity" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="9" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Header_UQ" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="10" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="Detail">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo structure="delimited" child_delimiter_type="char" child_delimiter="," child_order="infix" sequence_number="2" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="Warehouse" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="1" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Location" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="2" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Movement_Type" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="3" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Transaction_Code" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="4" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Event_Time" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="5" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="Product" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="6" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Reason_Code" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="7" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Batch" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="8" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="Quantity" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="9" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+			   <xs:element name="UQ" type="xs:string">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification="left" sequence_number="10" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
