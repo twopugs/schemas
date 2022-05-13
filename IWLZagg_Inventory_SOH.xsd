@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-16"?>
-<xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://schemas.microsoft.com/BizTalk/2003" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://schemas.microsoft.com/BizTalk/2003" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:appinfo>
-      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.BizTalk.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
-      <b:schemaInfo standard="Flat File" codepage="65001" default_pad_char=" " pad_char_type="char" count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" root_reference="ZaggSOH" />
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.Azure.Integration.DesignTools.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+      <b:schemaInfo standard="Flat File" codepage="65001" default_pad_char=" " pad_char_type="char" count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" root_reference="Root" />
     </xs:appinfo>
   </xs:annotation>
   <xs:element name="ZaggSOH">
@@ -32,41 +32,43 @@
                   <groupInfo sequence_number="0" xmlns="http://schemas.microsoft.com/BizTalk/2003" />
                 </xs:appinfo>
               </xs:annotation>
-              <xs:element name="Product" type="xs:string">
+              <xs:element name="Header_Product" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="1" />
+                    <b:fieldInfo justification="left" sequence_number="1" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="Description" type="xs:string">
+              <xs:element name="Header_Description" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="2" />
+                    <b:fieldInfo justification="left" sequence_number="2" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="Available" type="xs:string">
+              <xs:element name="Header_Available" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="3" />
+                    <b:fieldInfo justification="left" sequence_number="3" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="Committed" type="xs:string">
+              <xs:element name="Header_Committed" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="4" />
+                    <b:fieldInfo justification="left" sequence_number="4" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
-              <xs:element name="TotalQty" type="xs:string">
+              <xs:element name="Header_TotalQty" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="5" />
+                    <b:fieldInfo justification="left" sequence_number="5" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
+             
+             
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -86,38 +88,40 @@
               <xs:element name="Product" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="1" />
+                    <b:fieldInfo justification="left" sequence_number="1" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
               <xs:element name="Description" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="2" />
+                    <b:fieldInfo justification="left" sequence_number="2" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
               <xs:element name="Available" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="3" />
+                    <b:fieldInfo justification="left" sequence_number="3" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
               <xs:element name="Committed" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="4" />
+                    <b:fieldInfo justification="left" sequence_number="4" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
               <xs:element name="TotalQty" type="xs:string">
                 <xs:annotation>
                   <xs:appinfo>
-                    <b:fieldInfo justification="left" sequence_number="5" />
+                    <b:fieldInfo justification="left" sequence_number="5" wrap_char_type="char" wrap_char="&quot;" />
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
+            
+              
             </xs:sequence>
           </xs:complexType>
         </xs:element>
